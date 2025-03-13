@@ -11,7 +11,15 @@ router.get('/', (req, res) => {
 
 // show
 router.get('/:slug', (req, res) => {
-    res.send(`posts details ${req.params.id}`)
+    //res.send(`posts details ${req.params.id}`)
+
+
+    // tried bonus 2 failed 
+    for (let i = 0; i < posts.length; i++) {
+        let thispost = posts[i]
+        return thispost
+    }
+    res.json(thispost)
 });
 
 // store

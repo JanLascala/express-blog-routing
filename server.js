@@ -4,6 +4,8 @@ const app = express();
 const port = 3000;
 
 
+
+
 //route requirement 
 const postRoute = require('./routers/posts');
 
@@ -16,7 +18,7 @@ app.listen(port, () => {
 
 app.get('/', (req, res) => {
     res.send('bakery home')
-    res.json(posts);
+
 
 });
 
