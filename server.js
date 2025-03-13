@@ -2,6 +2,8 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+//route requirement 
+const postRoute = require('./routers/posts');
 
 // server listening 
 app.listen(port, () => {
@@ -13,3 +15,6 @@ app.listen(port, () => {
 app.get('/', (req, res) => {
     res.send('bakery home')
 });
+
+//Declaration of new routes to express 
+app.use("/posts", postRoute)
