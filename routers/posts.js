@@ -14,12 +14,14 @@ router.get('/:slug', (req, res) => {
     //res.send(`posts details ${req.params.id}`)
 
 
-    // tried bonus 2 failed 
+    // tried bonus 2 failed attempt 3
     for (let i = 0; i < posts.length; i++) {
         let thispost = posts[i]
-        return thispost
+        if (thispost.slug === posts.slug) {
+            return res.json(thispost);
+        }
     }
-    res.json(thispost)
+
 });
 
 // store
@@ -29,18 +31,18 @@ router.post('/', (req, res) => {
 
 //update 
 
-router.put('/:id', (req, res) => {
+router.put('/:slug', (req, res) => {
     res.send(`updated posts ${req.params.id}`)
 });
 
 //patch or modify
 
-router.patch('/:id', (req, res) => {
+router.patch('/:slug', (req, res) => {
     res.send(`patch posts ${req.params.id}`)
 });
 
 // delete 
-router.delete('/:id', (req, res) => {
+router.delete('/:slug', (req, res) => {
     res.send(`Delete posts ${req.params.id}`)
 });
 
