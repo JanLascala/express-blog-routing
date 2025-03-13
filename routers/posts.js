@@ -2,14 +2,15 @@ const express = require('express');
 const router = express.Router();
 //request array posts
 const posts = require('../posts');
+
+
 //Index
 router.get('/', (req, res) => {
-
     res.json(posts);
 });
 
 // show
-router.get('/:id', (req, res) => {
+router.get('/:slug', (req, res) => {
     res.send(`posts details ${req.params.id}`)
 });
 
