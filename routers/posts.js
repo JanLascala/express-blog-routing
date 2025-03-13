@@ -29,7 +29,7 @@ router.patch('/:id', (req, res) => {
 });
 
 // delete 
-router.delete('/:id', (res, req) => {
+router.delete('/:id', (req, res) => {
     res.send(`Delete posts ${req.params.id}`)
 });
 
